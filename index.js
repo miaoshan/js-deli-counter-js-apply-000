@@ -10,7 +10,15 @@ function nowServing(currentLine){
   else{ return `Currently serving ${currentLine.shift()}.`
     }
 }
-function currentLine(currentLine){
+function currentLine(line){
   var newline=[];
-  
+  if(line==0){
+    return "The line is currently empty.";
+  }
+  else{
+    for (var i=0; i<line.length; i++){
+      newline.push(`&{i+1}.${line[i]}`);
+    }
+    return `The line is currently:${newline.join(",")}`;
+  }
 }
