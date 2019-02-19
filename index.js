@@ -19,6 +19,6 @@ function currentLine(line){
     for (var i=0; i<line.length; i++){
       newline.push(`${i+1}.${line[i]}`);
     }
-    return `The line is currently:${newline.join(",")}`;
+    return `The line is currently: ${newline.join(",")}`;
   }
 }
